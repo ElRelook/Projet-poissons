@@ -494,3 +494,6 @@ def app():
             st.write("5. Servez chaud avec des quartiers de citron et des légumes verts.")
             st.write("### Bon appétit !")
             
+# Lancer l'application
+if __name__ == '__main__':
+    app()
