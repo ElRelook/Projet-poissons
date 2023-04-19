@@ -1,4 +1,4 @@
-# Etudiants: ClÃ©ment Basdevant, Baptiste Garcia 
+# Etudiants: Clément Basdevant, Baptiste Garcia 
 # Encadrant: Yassine Zniyed
 
 import numpy as np
@@ -20,40 +20,40 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Charger le modÃ¨le de classification entraÃ®nÃ©
+# Charger le modèle de classification entraîné
 model = tf.keras.models.load_model('nouveau_modele2.h5')
 
-# DÃ©finir les labels des classes
+# Définir les labels des classes
 labels = ['Black Sea Sprat (Clupeonella)', 'Gilt-Head Bream (Dorade royale)', 'Hourse Mackerel (Chinchard)', "Pas de poisson dÃ©tectÃ©", 'Red Mullet (Rouget)', 'Red Sea Bream (Dorade rose)', 'Sea Bass (Bar)', 'Shrimp (Crevette)', 'Striped Red Mullet (Rouget-barbet de roche)', 'Trout (Truite)']
 
-# DÃ©finir une fonction pour prÃ©dire la classe d'une image donnÃ©e
+# Définir une fonction pour prédire la classe d'une image donnée
 def predict(image):
-    # PrÃ©traiter l'image
+    # Prétraiter l'image
     image = cv2.resize(image, (224, 224))
     image = tf.keras.applications.mobilenet_v2.preprocess_input(image)
     
-    # Faire la prÃ©diction
+    # Faire la prédiction
     prediction = model.predict(np.array([image]))
     
-    # RÃ©cupÃ©rer la probabilitÃ© de chaque classe prÃ©dite
+    # Récupérer la probabilité de chaque classe prédite
     probabilities = tf.nn.softmax(prediction[0])
     
-    # RÃ©cupÃ©rer la classe prÃ©dite
+    # Récupérer la classe prédite
     class_idx = np.argmax(probabilities)
     
     return labels[class_idx], probabilities[class_idx]
 
-# DÃ©finir la page Streamlit
+# Définir la page Streamlit
 def app():
     st.set_option('deprecation.showfileUploaderEncoding', False)
     #st.set_page_config(page_title="Classification d'images de poissons", page_icon=":fish:", layout="wide")
     st.title("Classification d'images de poissons")
-    st.markdown("#### Etudiants: ClÃ©ment Basdevant, Baptiste Garcia")
+    st.markdown("#### Etudiants: Clément Basdevant, Baptiste Garcia")
     st.markdown("#### Encadrant: Yassine Zniyed")
 
     
-    # Charger l'image Ã  tester
-    uploaded_file = st.file_uploader("Choisissez une image de poisson Ã  classer", type=['jpg', 'jpeg', 'png'])
+    # Charger l'image à tester
+    uploaded_file = st.file_uploader("Choisissez une image de poisson à classer", type=['jpg', 'jpeg', 'png'])
     if uploaded_file is not None:
         # Lire l'image
         image = uploaded_file.read()
@@ -61,16 +61,16 @@ def app():
         image = cv2.imdecode(image, cv2.IMREAD_COLOR)
         # Afficher l'image
         st.image(image[:, :, ::-1], caption='Image de poisson', use_column_width=True)
-        # Faire la prÃ©diction
+        # Faire la prédiction
         label, probability = predict(image)
-        # Afficher le label de la classe prÃ©dite et sa probabilitÃ©
-        st.write(f"Classe prÃ©dite: {label}")
-        st.write(f"ProbabilitÃ©: {probability * 100:.2f}%")
+        # Afficher le label de la classe prédite et sa probabilité
+        st.write(f"Classe prédite: {label}")
+        st.write(f"Probabilité: {probability * 100:.2f}%")
         # On se fait des recettes de cuisine
-        if label == 'Sea Bass (Bar)':  # VÃ©rifier si l'image est une classe de bar
+        if label == 'Sea Bass (Bar)':  # Vérifier si l'image est une classe de bar
           # Afficher la recette du bar
           st.markdown("<h3 style='text-align: center;'>Bar:</h3>", unsafe_allow_html=True)
-          st.write("Le bar est un poisson trÃ¨s apprÃ©ciÃ© en cuisine, particuliÃ¨rement en MÃ©diterranÃ©e. Aussi connu sous le nom de loup de mer, ce poisson blanc Ã  la chair ferme est souvent apprÃ©ciÃ© grillÃ©, cuit au four ou mÃªme en tartare. Le bar est Ã©galement une source de protÃ©ines de qualitÃ© et de nutriments essentiels tels que les acides gras omÃ©ga-3 et les vitamines B12 et D.")
+          st.write("Le bar est un poisson très apprécié en cuisine, particulièrement en Méditerranée. Aussi connu sous le nom de loup de mer, ce poisson blanc à la chair ferme est souvent apprécié grillé, cuit au four ou même en tartare. Le bar est également une source de protéines de qualité et de nutriments essentiels tels que les acides gras oméga-3 et les vitamines B12 et D.")
           st.write("# Fiche technique sur le bar")
           st.write("Nom : Bar (Dicentrarchus labrax)")
           st.write("Apparence : Poisson blanc avec une peau argentÃ©e et des Ã©cailles sombres. La taille varie de 20 Ã  100 cm.")
@@ -506,7 +506,7 @@ def app():
             st.write("3. Badigeonnez les truites avec le mÃ©lange d'huile d'olive.")
             st.write("4. Placez les truites sur la grille du four et faites cuire pendant environ 8 Ã  10 minutes de chaque cÃ´tÃ©, jusqu'Ã  ce qu'elles soient dorÃ©es.")
             st.write("5. Servez chaud avec des quartiers de citron et des lÃ©gumes verts.")
-            st.write("### Bon appÃ©tit !")
+            st.write("### Bon appétit !")
             
 # Lancer l'application
 if __name__ == '__main__':
