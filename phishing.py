@@ -1,3 +1,6 @@
+# Etudiants: Clément Basdevant, Baptiste Garcia 
+# Encadrant: Yassine Zniyed
+
 import numpy as np
 import cv2
 import tensorflow as tf
@@ -29,7 +32,11 @@ def predict(image):
 # Définir la page Streamlit
 def app():
     st.set_option('deprecation.showfileUploaderEncoding', False)
+    st.set_page_config(page_title="Classification d'images de poissons", page_icon=":fish:", layout="wide")
     st.title("Classification d'images de poissons")
+    st.markdown("#### Etudiants: Clément Basdevant, Baptiste Garcia")
+    st.markdown("#### Encadrant: Yassine Zniyed")
+
     
     # Charger l'image à tester
     uploaded_file = st.file_uploader("Choisissez une image de poisson à classer", type=['jpg', 'jpeg', 'png'])
@@ -487,6 +494,3 @@ def app():
             st.write("5. Servez chaud avec des quartiers de citron et des légumes verts.")
             st.write("### Bon appétit !")
             
-# Lancer l'application
-if __name__ == '__main__':
-    app()
