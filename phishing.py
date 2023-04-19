@@ -6,6 +6,17 @@ import cv2
 import tensorflow as tf
 import streamlit as st
 
+st.markdown("""
+<style>
+body {
+    background-color: #f5f5f5;
+}
+h1, h2 {
+    color: #008080;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Charger le modèle de classification entraîné
 model = tf.keras.models.load_model('nouveau_modele2.h5')
 
