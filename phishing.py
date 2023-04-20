@@ -71,14 +71,14 @@ def app():
           # Afficher la recette du bar
           st.markdown("<h3 style='text-align: center;'>Bar:</h3>", unsafe_allow_html=True)
           st.write("Le bar est un poisson très apprécié en cuisine, particulièrement en Méditerranée. Aussi connu sous le nom de loup de mer, ce poisson blanc à la chair ferme est souvent apprécié grillé, cuit au four ou même en tartare. Le bar est également une source de protéines de qualité et de nutriments essentiels tels que les acides gras oméga-3 et les vitamines B12 et D.")
-          st.write("# Fiche technique sur le bar")
-          st.write("Nom : Bar (Dicentrarchus labrax)")
-          st.write("Apparence : Poisson blanc avec une peau argentée et des écailles sombres. La taille varie de 20 à 100 cm.")
-          st.write("Habitat : Le bar est présent dans les eaux côtières et les estuaires de l'Atlantique, de la Méditerranée et de la mer Noire.")
-          st.write("Régime alimentaire : Le bar se nourrit de petits poissons, de crustacés et de céphalopodes.")
-          st.write("Valeur nutritive : Le bar est riche en protéines de haute qualité, en acides gras oméga-3 et en vitamines B12 et D.")
-          st.write("Préparation culinaire : Le bar est souvent grillé ou cuit au four, mais peut également être préparé en tartare ou en ceviche.")
-          st.write("Saisonnalité : Le bar est généralement disponible toute l'année, mais sa saison de pêche optimale se situe entre le printemps et l'automne.")
+          if st.button("# Fiche technique sur le bar"):
+              st.write("Nom : Bar (Dicentrarchus labrax)")
+              st.write("Apparence : Poisson blanc avec une peau argentée et des écailles sombres. La taille varie de 20 à 100 cm.")
+              st.write("Habitat : Le bar est présent dans les eaux côtières et les estuaires de l'Atlantique, de la Méditerranée et de la mer Noire.")
+              st.write("Régime alimentaire : Le bar se nourrit de petits poissons, de crustacés et de céphalopodes.")
+              st.write("Valeur nutritive : Le bar est riche en protéines de haute qualité, en acides gras oméga-3 et en vitamines B12 et D.")
+              st.write("Préparation culinaire : Le bar est souvent grillé ou cuit au four, mais peut également être préparé en tartare ou en ceviche.")
+              st.write("Saisonnalité : Le bar est généralement disponible toute l'année, mais sa saison de pêche optimale se situe entre le printemps et l'automne.")
                       
           st.write("# Recette de bar")
           st.write("Ingrédients :")
