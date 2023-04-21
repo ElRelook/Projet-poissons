@@ -80,7 +80,7 @@ def app():
               st.write("Préparation culinaire : Le bar est souvent grillé ou cuit au four, mais peut également être préparé en tartare ou en ceviche.")
               st.write("Saisonnalité : Le bar est généralement disponible toute l'année, mais sa saison de pêche optimale se situe entre le printemps et l'automne.")
                       
-          if st.button("# Recette de bar")
+          if st.button("# Recette de bar"):
               st.write("# Recette de bar")
               st.write("Ingrédients :")
               st.write("- 1 bar entier vidé et écaillé")
@@ -125,7 +125,7 @@ def app():
               st.write("- Importance économique : La Clupeonella est une espèce de poisson importante pour la pêche commerciale et la consommation humaine. Elle est également utilisée comme appât pour la pêche sportive.")
 
           
-          if st.button("# Recette pour les sprats marinés")
+          if st.button("# Recette pour les sprats marinés"):
               st.write("# Recette pour les sprats marinés")
               st.write("Ingrédients :")
               st.write("- 500g de sprats")
@@ -167,7 +167,7 @@ def app():
                 st.write("- Reproduction : La Dorade royale se reproduit pendant les mois d'été. Les femelles pondent des œufs dans les eaux peu profondes, où ils éclosent après quelques jours. Les alevins sont pélagiques et se nourrissent de zooplancton jusqu'à ce qu'ils atteignent leur taille adulte.")
                 st.write("- Importance économique : La Dorade royale est une espèce de poisson importante pour la pêche commerciale et la consommation humaine. Elle est également une espèce populaire pour la pêche sportive.")
 
-            if st.button("# Recette de la Dorade royale grillée")
+            if st.button("# Recette de la Dorade royale grillée"):
                 st.write("# Recette de la Dorade royale grillée")
                 st.write("La Dorade royale grillée est une recette simple et délicieuse qui met en valeur les saveurs du poisson. Voici les étapes pour préparer cette recette :")
 
@@ -209,7 +209,7 @@ def app():
                 st.write("- Reproduction : La période de reproduction du Chinchard varie selon la région et la température de l'eau. Les femelles pondent des œufs en eau libre, qui éclosent après quelques jours. Les larves dérivantes se nourrissent de zooplancton jusqu'à ce qu'elles atteignent leur taille adulte.")
                 st.write("- Importance économique : Le Chinchard est une espèce de poisson importante pour la pêche commerciale et la consommation humaine. Il est également une espèce populaire pour la pêche sportive.")
             
-            if st.button("# Recette de Chinchard grillé au citron et aux herbes")
+            if st.button("# Recette de Chinchard grillé au citron et aux herbes"):
                 st.write("# Recette de Chinchard grillé au citron et aux herbes")
                 # Ingrédients
                 st.write("## Ingrédients :")
@@ -274,7 +274,7 @@ def app():
                 st.write("- Calories : 100 pour 100 g de poisson")
                 st.write("- Nutriments : Riche en vitamines B6 et B12, en niacine et en sélénium")
             
-            if st.button("# Recette : Rouget grillé avec légumes provençaux")
+            if st.button("# Recette : Rouget grillé avec légumes provençaux"):
                 st.write("# Recette : Rouget grillé avec légumes provençaux")
 
                 st.write("## Ingrédients")
@@ -328,7 +328,7 @@ def app():
                 st.write("- Acides gras oméga-3 : environ 500 milligrammes pour 100 grammes de chair")
                 st.write("- Autres nutriments : vitamine B12, sélénium, iode, fer, magnésium")
             
-            if st.button("# Recette - Dorade rose grillée")
+            if st.button("# Recette - Dorade rose grillée"):
                 st.write("# Recette - Dorade rose grillée")
 
                 st.write("## Ingrédients")
@@ -397,7 +397,7 @@ def app():
                 st.write("- Au réfrigérateur : 1 à 2 jours maximum")
                 st.write("- Au congélateur : jusqu'à 6 mois (décongeler lentement au réfrigérateur)")
             
-            if st.button("## Recette : Crevettes sautées à l'ail et au citron")
+            if st.button("## Recette : Crevettes sautées à l'ail et au citron"):
                 st.write("## Recette : Crevettes sautées à l'ail et au citron")
 
                 st.write("### Ingrédients")
@@ -445,7 +445,7 @@ def app():
                 st.write("- Vitamines : B3, B12, D")
                 st.write("- Minéraux : phosphore, potassium, magnésium, fer")
             
-            if st.button("## Recette : Rouget-barbet de roche en papillote")
+            if st.button("## Recette : Rouget-barbet de roche en papillote"):
                 st.write("## Recette : Rouget-barbet de roche en papillote")
 
                 st.write("### Ingrédients (pour 2 personnes) :")
@@ -496,7 +496,7 @@ def app():
                 st.write("- Bonne source d'acides gras oméga-3")
                 st.write("- Faible teneur en matières grasses")
             
-            if st.button("# Recette de la truite grillée")
+            if st.button("# Recette de la truite grillée"):
                 st.write("# Recette de la truite grillée")
 
                 st.write("## Ingrédients")
