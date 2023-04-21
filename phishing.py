@@ -245,7 +245,7 @@ def app():
             
             st.write("# Désolé, nous n'avons pas détecté de poisson dans cette image.")
             st.write("Nous sommes désolés, mais nous n'avons pas été en mesure de détecter de poisson dans cette image. Cela peut être dû à différents facteurs, tels que la qualité de l'image ou le fait qu'il n'y ait tout simplement pas de poisson présent.")
-            st.write("Nous vous recommandons de vérifier à nouveau l'image et de vous assurer qu'elle est de bonne qualité et qu'elle contient bien un poisson. Si vous rencontrez toujours des difficultés, n'hésitez pas à nous contacter pour obtenir de l'aide.")
+            st.write("Nous vous recommandons de vérifier à nouveau l'image et de vous assurer qu'elle est de bonne qualité et qu'elle contient bien un poisson.")
             
         if label == 'Red Mullet (Rouget)':
             
