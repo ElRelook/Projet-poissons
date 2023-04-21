@@ -65,7 +65,7 @@ def app():
         label, probability = predict(image)
         # Afficher le label de la classe prédite et sa probabilité
         st.write(f"Classe prédite: {label}")
-        st.write(f"Probabilité: {probability * 100:.2f}%")
+        #st.write(f"Probabilité: {probability * 100:.2f}%")
         # On se fait des recettes de cuisine
         if label == 'Sea Bass (Bar)':  # Vérifier si l'image est une classe de bar
           # Afficher la recette du bar
